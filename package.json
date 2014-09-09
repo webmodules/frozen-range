@@ -1,0 +1,31 @@
+{
+  "name": "frozen-range",
+  "version": "1.0.0",
+  "description": "Store range position for later use",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "tsc --module commonjs --declaration index.ts",
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/webmodules/frozen-range.git"
+  },
+  "keywords": [
+    "browser",
+    "range"
+  ],
+  "author": "Marco Aurelio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webmodules/frozen-range/issues"
+  },
+  "homepage": "https://github.com/webmodules/frozen-range",
+  "devDependencies": {
+    "typescript": "~1.0.1",
+    "zuul": "~1.10.2"
+  },
+  "dependencies": {
+    "dom-path": "1.0.0"
+  }
+}
