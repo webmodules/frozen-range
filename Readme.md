@@ -12,8 +12,44 @@ Given a `Range` and a `Node`:
 // Freeze
 var frozen = new FrozenRange(range, el);
 
+// ...
+
 // Thaw
 range = frozen.thaw(el);
 ```
 
-If the content of the reference Node provided changes the resulting Range will be innacurate.
+You can also optionally pass in an existing `Range` to reuse it (its contents will be overwriten by the `FrozenRange`'s):
+
+```javascript
+frozen.thaw(el, range);
+```
+
+## Important
+
+If the DOM subtree of the reference `Node` provided changes, the resulting `Range` will be innacurate.
+
+## License
+
+frozen-range
+
+Copyright (C) 2014 Automattic, Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
+OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
